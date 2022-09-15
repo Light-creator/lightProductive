@@ -5,6 +5,9 @@
     display: flex
     justify-content: center
     
+.board_wrapper
+    height: 100%
+
 .board
     width: 300px
     margin: 50px 20px 0 20px
@@ -13,13 +16,33 @@
     border-radius: 15px
     padding-bottom: 20px
 
+    display: flex
+    flex-direction: column
+    min-height: 75px
+
 .title_block
-    color: $white
-    text-align: center
-    width: 100%
-    font-weight: $fwBold
-    font-size: $fsHead
+    color: $lightGray
+    width: 90%
     margin-top: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+
+    h4
+        font-weight: $fwBold
+        font-size: $fsHead
+
+    button
+        color: $lightGray
+        background: none
+        outline: none
+        border: none
+        cursor: pointer
+        &:hover
+            color: $lightAccent
+            transition: 0.6s ease
+
 
 .card
     min-height: 30px
@@ -31,7 +54,46 @@
     color: $lightGray
     background: $secondDark
     border-radius: 5px
+    cursor: pointer
+
+    &:hover
+        box-shadow: 2px 2px 2px 0.5px rgba(219, 203, 107, 0.2)
+        transition: 0.2s ease
+        transform: translateY(-3px)
+
+.card_down
+    margin-bottom: 40px
+    position: relative
+
+    &::before
+        content: ''
+        position: absolute
+        top: 50px
+        margin-left: auto
+        margin-right: auto
+        left: 0
+        right: 0
+        width: 100%
+        height: 30px
+        background: $secondDark
+        opacity: 0.5
+        border-radius: 7px
 
 
+.create_task
+    margin: 20px 10px 0 10px
+    border-radius: 10px
+    height: 30px
+    background: $mainDark
 
+    outline: none
+    border: 2px solid $lightGray
+
+    color: $lightGray
+    cursor: pointer
+
+    &:hover
+        color: $lightAccent
+        border: 2px solid $lightAccent
+        transition: 0.6s ease
 
